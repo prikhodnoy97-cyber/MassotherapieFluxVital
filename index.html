@@ -80,6 +80,15 @@
   .trust-item .dot{ width:6px; height:6px; border-radius:50%; background:var(--moss); flex-shrink:0; }
   .hero-actions{ margin-top:38px; display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
   .btn-primary{ background:var(--paper); color:var(--ink); border:none; padding:15px 30px; font-family:'Inter', sans-serif; font-size:14px; font-weight:600; letter-spacing:0.01em; border-radius:2px; text-decoration:none; display:inline-block; transition:transform .25s, background .25s; }
+  .gorendezvous-button a{
+    display:inline-flex; align-items:center; justify-content:center;
+    background:var(--ember); color:var(--ink) !important;
+    font-family:'Inter', sans-serif; font-size:14px; font-weight:600; letter-spacing:0.01em;
+    text-decoration:none !important; border-radius:2px;
+    width:280px; height:50px; box-sizing:border-box;
+    transition:transform .25s, background .25s;
+  }
+  .gorendezvous-button a:hover{ background:#B9793E; transform:translateY(-1px); }
   .btn-primary:hover{background:var(--moss); transform:translateY(-1px);}
   .btn-ghost{ font-size:14px; text-decoration:none; border-bottom:1px solid var(--line-strong); padding-bottom:2px; color:var(--paper-dim); transition:color .2s, border-color .2s; }
   .btn-ghost:hover{color:var(--paper); border-color:var(--moss);}
@@ -175,7 +184,7 @@
         <button id="btn-fr" class="active" onclick="setLang('fr')">FR</button>
         <button id="btn-en" onclick="setLang('en')">EN</button>
       </div>
-      <a class="nav-cta" href="#contact" data-fr>Réserver</a><a class="nav-cta" href="#contact" data-en>Book now</a>
+      <a class="nav-cta" href="https://www.gorendezvous.com/homepage/142309?companyId=142309" target="_blank" rel="noopener" data-fr>Réserver</a><a class="nav-cta" href="https://www.gorendezvous.com/homepage/142309?companyId=142309" target="_blank" rel="noopener" data-en>Book now</a>
     </div>
   </nav>
 </header>
@@ -201,7 +210,7 @@
       <div class="trust-item"><span class="dot"></span><span data-fr>Massages adaptés aux enfants et aux femmes enceintes</span><span data-en>Massages adapted for children and pregnant women</span></div>
     </div>
     <div class="hero-actions">
-      <a class="btn-primary" href="#contact" data-fr>Prendre rendez-vous</a><a class="btn-primary" href="#contact" data-en>Book an appointment</a>
+      <div data-professionalpagename="" data-bookingwidgeturlparams="companyId=142309" data-language="en" data-label="Book Appointment" data-url="https://www.gorendezvous.com/" class="gorendezvous-button" data-buttoncolor="warning" data-width="280px" data-height="50px"><a href="https://www.gorendezvous.com/homepage/142309?companyId=142309" target="GOrendezvous">Book Appointment</a></div>
       <a class="btn-ghost" href="#tarifs" data-fr>Voir les tarifs ↓</a><a class="btn-ghost" href="#tarifs" data-en>See pricing ↓</a>
     </div>
     </div>
@@ -396,7 +405,10 @@
 <section class="cta-band">
   <div class="wrap">
     <h2><span data-fr>Offrez-vous un moment pour retrouver votre flux.</span><span data-en>Give yourself a moment to find your flow.</span></h2>
-    <a class="btn-primary" href="sms:+14383993822" data-fr>Texter au +1 (438) 399-3822</a><a class="btn-primary" href="sms:+14383993822" data-en>Text +1 (438) 399-3822</a>
+    <div style="display:flex; gap:18px; align-items:center; justify-content:center; flex-wrap:wrap;">
+      <a class="btn-primary" href="sms:+14383993822" data-fr>Texter au +1 (438) 399-3822</a><a class="btn-primary" href="sms:+14383993822" data-en>Text +1 (438) 399-3822</a>
+      <div data-professionalpagename="" data-bookingwidgeturlparams="companyId=142309" data-language="en" data-label="Book Appointment" data-url="https://www.gorendezvous.com/" class="gorendezvous-button" data-buttoncolor="warning" data-width="280px" data-height="50px"><a href="https://www.gorendezvous.com/homepage/142309?companyId=142309" target="GOrendezvous">Book Appointment</a></div>
+    </div>
   </div>
 </section>
 
@@ -416,5 +428,6 @@ function setLang(lang){
 }
 </script>
 
+<script>!function (d, s) { var js, sid = "gorendezvous-bookingwidget-script"; var sEl = d.getElementById(sid); if(sEl) { sEl.parentNode.removeChild(sEl); } js = d.createElement(s); js.id = sid; js.src = "https://www.gorendezvous.com/Scripts/gorendezvous.bookingWidgetV2.min.js?v=" + (Math.floor(new Date().getTime()/(1000*60*30))*(1000*60*30)).toString(); d.body.appendChild(js); } (document, "script");</script>
 </body>
 </html>
